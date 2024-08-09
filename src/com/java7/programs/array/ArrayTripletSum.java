@@ -10,7 +10,7 @@ public class ArrayTripletSum {
 	{
 		System.out.println("Input Array : "+Arrays.toString(inputArray));
 		System.out.println("Given Number : "+sum);
-		System.out.println("Array triplets whose sum is "+sum+" are :");
+		System.out.println("Array triplets whose sum is "+ sum +" are :");
 		
 		Arrays.sort(inputArray);
 		for (int i = 0; i < inputArray.length-2; i++) 

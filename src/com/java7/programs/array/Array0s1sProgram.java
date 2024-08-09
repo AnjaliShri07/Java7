@@ -2,6 +2,7 @@ package com.java7.programs.array;
 
 import java.util.Arrays;
 
+//A divide-and-conquer algorithm
 public class Array0s1sProgram {
 	private static void sortBinaryArray(int[] inputArray)
 	{

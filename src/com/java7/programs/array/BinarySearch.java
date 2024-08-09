@@ -20,7 +20,7 @@ class BinarySearch {
 		      System.out.println("Element is not found!");  
 		   }  
 		 }  
-		 public static void main(String args[]){  
+		 public static void main(String[] args){
 			 int c, n, search, arr[];
 			 Scanner in = new Scanner(System.in);
 			    System.out.println("Enter number of elements");

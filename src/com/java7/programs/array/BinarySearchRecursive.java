@@ -30,8 +30,7 @@ public class BinarySearchRecursive {
             return binarySearch(arr, mid + 1, r, x);
         }
  
-        // We reach here when element is not present in
-        // array
+        // We reach here when element is not present in array
         return -1;
     }
  

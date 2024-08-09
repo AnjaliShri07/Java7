@@ -6,8 +6,7 @@ import java.util.List;
 
 class LeftRightRotation {
 	public static List<Integer> rotateLeft(List<Integer> l, int d) {
-		List<Integer> list = new ArrayList<>();
-		Integer[] arr = l.toArray(new Integer[l.size()]);
+        Integer[] arr = l.toArray(new Integer[0]);
 
 		for (int i = 0; i < d; i++) {
 			int j, first;
@@ -17,16 +16,12 @@ class LeftRightRotation {
 			}
 			arr[j] = first;
 		}
-		for (int i = 0; i < arr.length; i++) {
-			list.add(arr[i]);
-		}
 
-		return list;
+        return new ArrayList<>(Arrays.asList(arr));
 	}
 	
 	public static List<Integer> rotateRight(List<Integer> a, int d) {
-		List<Integer> rightlist = new ArrayList<>();
-		Integer[] arr = a.toArray(new Integer[a.size()]);
+        Integer[] arr = a.toArray(new Integer[0]);
 
 		for (int i = 0; i < d; i++) {
 			int j, last;
@@ -36,11 +31,8 @@ class LeftRightRotation {
 			}
 			arr[0] = last;
 		}
-		for (int i = 0; i < arr.length; i++) {
-			rightlist.add(arr[i]);
-		}
 
-		return rightlist;
+        return new ArrayList<>(Arrays.asList(arr));
 	}
 
 	public static void main(String[] args) {
@@ -51,9 +43,9 @@ class LeftRightRotation {
 		my_list.add(4);
 		my_list.add(5);
 		my_list.add(6);
-		my_list.add(8);
-		List<Integer> rotateList = LeftRightRotation.rotateLeft(my_list, 4);
-		List<Integer> rotateRight = LeftRightRotation.rotateRight(my_list, 4);
+		my_list.add(7);
+		List<Integer> rotateList = LeftRightRotation.rotateLeft(my_list, 3);
+		List<Integer> rotateRight = LeftRightRotation.rotateRight(my_list, 3);
 		System.out.println("Left Rotation :  " + Arrays.toString(rotateList.toArray()));
 		System.out.println("Right Rotation :  " + Arrays.toString(rotateRight.toArray()));
 	}

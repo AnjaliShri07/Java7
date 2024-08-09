@@ -16,6 +16,8 @@ public class AllZeroRightLeft {
 		System.out.println("========================================================");
 		AllZeroRightLeft.moveZerosToLeft(arr);
 		AllZeroRightLeft.moveZerosToLeft(arr1);
+		System.out.println("=====================================================");
+		AllZeroRightLeft.sort(arr1);
 
 	}
 	// all zero to right
@@ -108,6 +110,22 @@ public class AllZeroRightLeft {
 			writeIndex--;
 		}
 		System.out.println("While loop: All Zeros to left : "+Arrays.toString(A));
+	}
+
+	static void sort(int[] arr) {
+		int n = arr.length;
+		int low = 0;
+		int high=n-1;
+		while(low<high){
+			if(arr[low] == 1) {
+				int temp = arr[low];
+				arr[low] = arr[high];
+				arr[high] = temp;
+				low++;
+			}else
+				high--;
+		}
+		System.out.println("While loop with 2 pointer: All Zeros to left : "+Arrays.toString(arr));
 	}
 
 }

@@ -1,6 +1,6 @@
 package com.java7.programs.array;
 
-public class ElementWithLeftSmallerandRightGreater {
+public class ElementWithLeftSmallerAndRightGreater {
 	public static boolean check(int[] arr, int n, int index) {
 			int i = index - 1;
 	        int j = index + 1;

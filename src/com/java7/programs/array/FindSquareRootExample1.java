@@ -14,7 +14,7 @@ public class FindSquareRootExample1 {
 
 	public static double squareRoot(int num) {
 		double t;// temporary variable
-		double sqrtroot = num / 2;
+		double sqrtroot = (double) num / 2;
 		do {
 			t = sqrtroot;
 			sqrtroot = (t + (num / t)) / 2;
