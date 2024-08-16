@@ -1,7 +1,7 @@
 package com.java7.programs.array;
 
 import java.util.Arrays;
-
+//three pointer technique
 public class Array0s1s2sProgram {
     private static void sortBinaryArray(int[] arr){
         int n= arr.length;

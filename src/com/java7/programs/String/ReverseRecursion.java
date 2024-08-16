@@ -12,7 +12,7 @@ public class ReverseRecursion {
 		return reverse(str.substring(1)) + str.charAt(0);
 	}
 	public static void main(String[] args) {
-		String str = "Object";
+		String str = "Object abc";
 		System.out.println(reverse(str));
 	}
 

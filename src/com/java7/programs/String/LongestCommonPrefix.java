@@ -1,38 +1,43 @@
 package com.java7.programs.String;
 
 public class LongestCommonPrefix {
-	public static String findLongestPrefix(String[] strs) {
-		//If string array is null or empty
-		if(strs == null || strs.length == 0) {
+	public static String longestCommonPrefix(String[] words) {
+		if (words == null || words.length == 0) {
 			return "";
 		}
-		//Assign first word of an array string
-		String lcp = strs[0];
-		//Traverse an array from 1 to n-1
-		for(int i = 1; i < strs.length; i++) {
-			String currentWord = strs[i];
-			int j = 0;
-			/*
-		While common character is found,
-		increment the value of j
-			 */
-			while(j < currentWord.length() &&
-					j < lcp.length() &&
-					currentWord.charAt(j) == lcp.charAt(j)) {
-				j++;
+
+		// Use the first string as the initial prefix
+		String prefix = words[0];
+		System.out.println(prefix);
+		// Iterate over the array of strings
+		for (String str : words) {
+			// Reduce the prefix until it matches the start of the current string
+			while (str.indexOf(prefix) != 0) {
+				System.out.println(prefix.length());
+				prefix = prefix.substring(0, prefix.length() - 1);
+				System.out.println(prefix);
+				if (prefix.isEmpty()) {
+					return "";
+				}
 			}
-			//If no common character is found
-			if(j == 0) {
-				return "";
-			}
-			//Assign common substring
-			lcp = currentWord.substring(0,j);
 		}
-		return lcp;
+
+		return prefix;
 	}
+
 	public static void main(String[] args) {
-		String[] strgs = {"cat","cable","camera"};
-		String result = findLongestPrefix(strgs);
-		System.out.println(result);
+		String[] words1 = {"flower", "flow", "flight"};
+		String[] words2 = {"dog", "racecar", "car"};
+		String[] words3 = {"flower","float","fly"};
+		String[] words4 = {"cat","cable","camera"};
+
+		String result1 = longestCommonPrefix(words1);
+		System.out.println("Longest Common Prefix: " + result1); // Output: "fl"
+
+		String result2 = longestCommonPrefix(words2);
+		System.out.println("Longest Common Prefix: " + result2); // Output: ""
+
+		System.out.println("Longest Common Prefix: " + longestCommonPrefix(words3));
+		System.out.println("Longest Common Prefix: " + longestCommonPrefix(words4));
 	}
 }
