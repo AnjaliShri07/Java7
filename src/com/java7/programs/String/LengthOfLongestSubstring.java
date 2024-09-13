@@ -9,7 +9,7 @@ public class LengthOfLongestSubstring {
 
 		for(int k = i; k <= j; k++)
 		{
-			if (visited[str.charAt(k) - 'a'] == true)
+			if (visited[str.charAt(k) - 'a'])
 				return false;
 
 			visited[str.charAt(k) - 'a'] = true;
