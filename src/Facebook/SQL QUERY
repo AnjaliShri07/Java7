@@ -1,0 +1,15 @@
+CREATE TABLE users (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  user_type VARCHAR(50) NOT NULL,
+  extra_info VARCHAR(255) NULL
+  );
+
+
+  CREATE TABLE `connections` (
+    `user_id` int NOT NULL,
+    `connection_id` int NOT NULL,
+    PRIMARY KEY (`user_id`,`connection_id`),
+    FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+    FOREIGN KEY (`connection_id`) REFERENCES `users` (`id`)
+  );
