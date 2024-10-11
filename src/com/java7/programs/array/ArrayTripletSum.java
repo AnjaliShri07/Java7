@@ -45,14 +45,8 @@ public class ArrayTripletSum {
 	
 	
 	//using HashSet
-	private static void getArrayTripletsUsingHashSet(int[] inputArray, int sum) 
+	private static void getArrayTripletsUsingHashSet(int[] inputArray, int sum)
 	{
-		System.out.println("Input Array : "+Arrays.toString(inputArray));
-		
-		System.out.println("Given Number : "+sum);
-		
-		System.out.println("Array triplets whose sum is "+sum+" are :");
-		
 		//Method 2 : Using HashSet
 		HashSet<Integer> set = new HashSet<>();
 		for (int i = 0; i < inputArray.length-1; i++) 
@@ -108,7 +102,7 @@ public class ArrayTripletSum {
 	 */
 	
 	
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
 		getArrayTriplets(new int[] {7, 5, 9, 3, 0, 8, 6}, 12);   //[0, 3, 9]
 																 //[0, 5, 7]

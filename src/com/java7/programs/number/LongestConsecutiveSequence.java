@@ -57,7 +57,7 @@ Identifying Sequence Start:
 For each number, we check if it's the start of a sequence by ensuring that num - 1 is not in the set. This ensures that we are counting sequences only once from their starting point.
 
 Counting Consecutive Numbers:
-Once the starting number of a sequence is identified, we increment currentNum and count how many consecutive numbers exist in the set.
+Once the starting number of a sequence is Identified, we increment currentNum and count how many consecutive numbers exist in the set.
 
 Updating Longest Streak:
 Each time a new sequence is found, we compare its length to the longest sequence found so far and update the longest streak if needed.*/

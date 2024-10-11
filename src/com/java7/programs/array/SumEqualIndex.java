@@ -4,7 +4,7 @@ public class SumEqualIndex {
     public static int findIndex(int[] arr) {
     int n = arr.length;
 
-    // Loop through the array, considering each index as a possible partition
+    // Loop through the array, consIdering each index as a possible partition
         for (int i = 0; i < n; i++) {
         int sumLeft = 0;
         int sumRight = 0;

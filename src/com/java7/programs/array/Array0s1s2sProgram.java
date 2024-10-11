@@ -27,7 +27,7 @@ public class Array0s1s2sProgram {
             }else
                 mid++;
         }
-        System.out.println("Input Array After Sorting Left side : "+ Arrays.toString(arr));
+        System.out.println("Input Array After Sorting Left sIde : "+ Arrays.toString(arr));
     }
     public static void main(String[] args) {
         sortBinaryArray(new int[] {1, 2, 0, 1, 2, 1, 0, 1, 2});

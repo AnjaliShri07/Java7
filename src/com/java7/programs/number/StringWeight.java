@@ -1,7 +1,7 @@
 package com.java7.programs.number;
 
 /*Find the weight of given String.
-        (A-Z/a-z) we have 26 alphabetic, consider the position of a-z alphabets as 1-26. Based on that find the weight of
+        (A-Z/a-z) we have 26 alphabetic, consIder the position of a-z alphabets as 1-26. Based on that find the weight of
 the given String.
         Ex:
 Given String: Apple

@@ -1,6 +1,6 @@
 package com.java7.programs.realSenario;
 
-/*In mathematics, the dot product, or scalar product (or sometimes inner product in the context of Euclidean space), 
+/*In mathematics, the dot product, or scalar product (or sometimes inner product in the context of EuclIdean space), 
 is an algebraic operation that takes two equal-length sequences of numbers (usually coordinate vectors) and returns 
 a single number. This operation can be defined either algebraically or geometrically.*/
 

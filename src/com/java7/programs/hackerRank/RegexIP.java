@@ -32,12 +32,12 @@ class MyRegex
  * 
  * 
  * 
- * Some valid IP address:
+ * Some valId IP address:
 
 000.12.12.034
 121.234.12.12
 23.45.12.56
-Some invalid IP address:
+Some invalId IP address:
 
 000.12.234.23.23
 666.666.23.23

@@ -2,8 +2,8 @@ package com.java7.programs.String;
 
 import java.util.Scanner;
 
-/*Enter number of names you want to enter:4
-Enter all the names:
+/*Enter number of Names you want to enter:4
+Enter all the Names:
 Ram
 Anjali
 Jai
@@ -12,40 +12,40 @@ Names in Sorted Order:Anjali,Jai,Ram,Zuned*/
 
 public class AlphaOrder1
 {
-    public static void main(String[] args) 
+    public static void main(String[] args)
     {
         int n;
         String temp;
         Scanner s = new Scanner(System.in);
-        System.out.print("Enter number of names you want to enter:");
+        System.out.print("Enter number of Names you want to enter:");
         n = s.nextInt();
         
-        String names[] = new String[n];
+        String Names[] = new String[n];
         
         Scanner s1 = new Scanner(System.in);
-        System.out.println("Enter all the names:");
+        System.out.println("Enter all the Names:");
         for(int i = 0; i < n; i++)
         {
-            names[i] = s1.nextLine();
+            Names[i] = s1.nextLine();
         }
         
         for (int i = 0; i < n; i++) 
         {
             for (int j = i + 1; j < n; j++) 
             {
-                if (names[i].compareTo(names[j])>0) 
+                if (Names[i].compareTo(Names[j])>0) 
                 {
-                    temp = names[i];
-                    names[i] = names[j];
-                    names[j] = temp;
+                    temp = Names[i];
+                    Names[i] = Names[j];
+                    Names[j] = temp;
                 }
             }
         }
         System.out.print("Names in Sorted Order: ");
         for (int i = 0; i < n - 1; i++) 
         {
-            System.out.print(names[i] + ",");
+            System.out.print(Names[i] + ",");
         }
-        System.out.print(names[n - 1]);
+        System.out.print(Names[n - 1]);
     }
 }

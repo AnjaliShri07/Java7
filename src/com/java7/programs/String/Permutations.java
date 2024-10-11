@@ -17,7 +17,7 @@ public class Permutations {
     * Recursive method which actually prints all permutations
     * of given String, but since we are passing an empty String
     * as current permutation to start with,
-    * I have made this method private and didn't exposed it to client. 
+    * I have made this method private and dIdn't exposed it to client.
     */
    private static void permutation(String perm, String word) {
         if (word.isEmpty()) {

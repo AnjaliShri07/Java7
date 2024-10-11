@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class DuplicateZeros {
-    public static void duplicateZeros(int[] arr) {
+    public static List<Integer> duplicateZeros(int[] arr) {
         List<Integer> list = new ArrayList<>();
 
         // Add elements to the list, duplicating zeros
@@ -17,13 +17,14 @@ public class DuplicateZeros {
         }
 
         // Copy the first 'arr.length' elements of the list back to the array
-        for (int i = 0; i < arr.length; i++) {
+        /*for (int i = 0; i < arr.length; i++) {
             arr[i] = list.get(i);
-        }
+        }*/
+        return list;
     }
     public static void main(String[] args) {
         int[] arr = {2, 0, 1, 4, 0, 3, 5, 0};
-        duplicateZeros(arr);
-        System.out.println(Arrays.toString(arr)); // Output: [2, 0, 0, 1, 4, 0, 0, 3]
+        System.out.println(duplicateZeros(arr));
+        //System.out.println(Arrays.toString(arr)); // Output: [2, 0, 0, 1, 4, 0, 0, 3]
     }
 }

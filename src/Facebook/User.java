@@ -5,23 +5,23 @@ import java.sql.SQLException;
 import java.util.Set;
 
 public abstract class User {
-    private Integer id;
-    private String name;
+    private Integer Id;
+    private String Name;
     private String user_type;
     private String extra_info;
     private Set<User> connections;
 
-    public User(Integer id, String name, String user_type, String extra_info, Set<User> connections) {
-        this.id = id;
-        this.name = name;
+    public User(Integer Id, String Name, String user_type, String extra_info, Set<User> connections) {
+        this.Id = Id;
+        this.Name = Name;
         this.user_type = user_type;
         this.extra_info = extra_info;
         this.connections = connections;
     }
 
-    public User(int id, String name) {
-        this.id = id;
-        this.name = name;
+    public User(int Id, String Name) {
+        this.Id = Id;
+        this.Name = Name;
     }
 
     public String getUser_type() {
@@ -41,19 +41,19 @@ public abstract class User {
     }
 
     public Integer getId() {
-        return id;
+        return Id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setId(Integer Id) {
+        this.Id = Id;
     }
 
     public String getName() {
-        return name;
+        return Name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
 
@@ -73,13 +73,13 @@ public abstract class User {
     public abstract String getUserType();
 
     public static User fromResultSet(ResultSet rs) throws SQLException {
-        String name = rs.getString(2);
+        String Name = rs.getString(2);
         String userType = rs.getString(3);
         String extraInfo = rs.getString(4);
         if("influencer".equalsIgnoreCase(userType)){
-            return new Influencer(rs.getInt(1), name, Integer.parseInt(extraInfo));
+            return new Influencer(rs.getInt(1), Name, Integer.parseInt(extraInfo));
         }else{
-            return new RegularUser(rs.getInt(1), name);
+            return new RegularUser(rs.getInt(1), Name);
         }
     }
 

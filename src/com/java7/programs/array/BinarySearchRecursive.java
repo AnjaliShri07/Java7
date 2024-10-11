@@ -16,11 +16,11 @@ public class BinarySearchRecursive {
             int mid = l + (r - l) / 2;
  
             // If the element is present
-            // at the middle itself
+            // at the mIddle itself
             if (arr[mid] == x)
                 return mid;
  
-            // If element is smaller than mid, then it can
+            // If element is smaller than mId, then it can
             // only be present in left subarray
             if (arr[mid] > x)
                 return binarySearch(arr, l, mid - 1, x);

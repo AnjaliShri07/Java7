@@ -5,13 +5,13 @@ import java.util.Arrays;
 public class TwoPairOfSumUsingBinarySearch {
 	public static boolean binarySearch(int[] arr, int l, int r, int key){
         while(l<=r){
-            int mid = l+(r-l)/2;
-            if(arr[mid] == key)
+            int mId = l+(r-l)/2;
+            if(arr[mId] == key)
                 return true;
-            if(arr[mid] < key)
-                l = mid+1;
+            if(arr[mId] < key)
+                l = mId+1;
             else
-                r = mid-1;
+                r = mId-1;
         }
         return false;
     }

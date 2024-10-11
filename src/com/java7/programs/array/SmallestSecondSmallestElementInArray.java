@@ -23,7 +23,7 @@ public class SmallestSecondSmallestElementInArray {
 		System.out.println("Smallest Element : "+ smallest);
 		System.out.println("Second Smallest Element : "+ secondSmallest);
 	}
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
 		getSmallestAndSecondSmallestElement(new int[] {17, 11, 23, 64, 41, 88, 35});
 		System.out.println("===============================");

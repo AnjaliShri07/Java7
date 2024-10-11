@@ -6,7 +6,7 @@ class JavaRegex {
 	 public static final String regularExpression = "^[a-zA-Z][a-zA-Z0-9_]{7,29}$";
 }
 
-public class UsernameValidator {
+public class UserNameValidator {
     private static final Scanner scan = new Scanner(System.in);
     
     public static void main(String[] args) {
@@ -15,9 +15,9 @@ public class UsernameValidator {
             String userName = scan.nextLine();
 
             if (userName.matches(JavaRegex.regularExpression)) {
-                System.out.println("Valid");
+                System.out.println("ValId");
             } else {
-                System.out.println("Invalid");
+                System.out.println("InvalId");
             }           
         }
     }
@@ -27,12 +27,12 @@ public class UsernameValidator {
 /*
 For example:
 
-Username	Validity
-INVALID; Username length < 8 characters
-VALID
-VALID
-INVALID; Username begins with non-alphabetic character
-INVALID; '?' character not allowed
+UserName	ValIdity
+INVALId; UserName length < 8 characters
+VALId
+VALId
+INVALId; UserName begins with non-alphabetic character
+INVALId; '?' character not allowed
 */
 
 /*
@@ -49,12 +49,12 @@ Julia@007
 _Julia007
 Sample Output 0
 
-Invalid
-Valid
-Valid
-Invalid
-Invalid
-Valid
-Invalid
-Invalid
+InvalId
+ValId
+ValId
+InvalId
+InvalId
+ValId
+InvalId
+InvalId
 */

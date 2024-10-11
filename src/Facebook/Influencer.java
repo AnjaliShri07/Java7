@@ -8,8 +8,8 @@ public class Influencer extends User{
         return "Influencer";
     }
 
-    public Influencer(int id, String name, int followerCount){
-        super(id, name);
+    public Influencer(int id, String Name, int followerCount){
+        super(id, Name);
         this.followerCount = followerCount;
     }
 

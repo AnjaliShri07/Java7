@@ -2,7 +2,7 @@ package com.java7.programs.array;
 
 import java.util.Arrays;
 
-public class ArrayReverseWitoutAdditionalArray {
+public class ArrayReverseWithoutAdditionalArray {
 	static void reverseArray(int inputArray[])
 	{
 		System.out.println("Array Before Reverse : "+Arrays.toString(inputArray));

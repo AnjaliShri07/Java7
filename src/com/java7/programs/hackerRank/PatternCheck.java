@@ -13,9 +13,9 @@ public class PatternCheck {
 			String pattern = in.nextLine();
           	try {
                 Pattern.compile(pattern);
-                System.out.println("Valid");
+                System.out.println("ValId");
             } catch (PatternSyntaxException e) {
-                System.out.println("Invalid");
+                System.out.println("InvalId");
             }
             testCases--;
 		}
@@ -31,7 +31,7 @@ public class PatternCheck {
 batcatpat(nat
 Sample Output
 
-Valid
-Invalid
-Invalid
+ValId
+InvalId
+InvalId
 */

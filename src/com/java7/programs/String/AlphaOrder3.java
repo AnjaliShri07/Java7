@@ -28,7 +28,7 @@ public class AlphaOrder3 {
 	    // arrays and one by one 
 	    // pick characters.  
 	    // Below loop takes O(n) time 
-	    // considering the MAX is constant. 
+	    // consIdering the MAX is constant.
 	    int i = 0, j = 0, k = 0; 
 	    while (k < n)  
 	    { 
@@ -54,7 +54,7 @@ public class AlphaOrder3 {
 	    } 
 	      
 	// Driver function  
-	public static void main(String argc[]){ 
+	public static void main(String argc[]){
 	  
 	    String str = "bAwutndekWEdkd"; 
 	    System.out.println(alternateSort(str)); 

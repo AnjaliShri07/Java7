@@ -19,7 +19,7 @@ class Result1 {
 	 * 396285104 573261094 759641832 819230764 364801279
 	 */
 
-    public static void miniMaxSum(List<Long> arr) { //1 2 3 4 5, 7 69 2 221 8974, 
+    public static void miniMaxSum(List<Long> arr) { //1 2 3 4 5, 7 69 2 221 8974,
     	
     	if(!arr.isEmpty() && arr.size() >0 && arr.size()== 5){
             long size =0;

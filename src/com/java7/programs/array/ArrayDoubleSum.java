@@ -11,7 +11,7 @@ public class ArrayDoubleSum {
 	        /* Sort the elements */
 	        Arrays.sort(A);
 
-	        /* Now look for the two candidates
+	        /* Now look for the two candIdates
 	        in the sorted array*/
 	        l = 0;
 	        r = A.length - 1;

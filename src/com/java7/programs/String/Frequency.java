@@ -9,7 +9,7 @@ import java.util.Map.Entry;
 public class Frequency {
 
 	public static void main(String[] args) {
-		String str="my name is anjali shrivastava"; //there is 4 space that's why output showing { =4}
+		String str="my Name is anjali shrivastava"; //there is 4 space that's why output showing { =4}
 		String s = str.replaceAll("\\s", "");
 	
 		Map<Character, Integer> map1 = new LinkedHashMap<>();

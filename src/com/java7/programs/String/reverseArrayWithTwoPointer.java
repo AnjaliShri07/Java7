@@ -24,7 +24,7 @@ public class reverseArrayWithTwoPointer {
             s[left] = s[right];
             s[right] = temp;
 
-            // Move towards the middle
+            // Move towards the mIddle
             left++;
             right--;
         }

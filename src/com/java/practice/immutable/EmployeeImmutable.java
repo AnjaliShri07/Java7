@@ -1,4 +1,4 @@
-package com.java7.programs;
+package com.java.practice.immutable;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,22 +6,22 @@ import java.util.List;
 
 public final class EmployeeImmutable {
 
-    private final Integer id;
-    private final String name;
+    private final Integer Id;
+    private final String Name;
     private final List<String> address;
 
-    public EmployeeImmutable(Integer id, String name, List<String> address) {
-        this.id = id;
-        this.name = name;
+    public EmployeeImmutable(Integer Id, String Name, List<String> address) {
+        this.Id = Id;
+        this.Name = Name;
         this.address = new ArrayList<>();
     }
 
     public Integer getId() {
-        return id;
+        return Id;
     }
 
     public String getName() {
-        return name;
+        return Name;
     }
 
     public List<String> getAddress() {
@@ -31,8 +31,8 @@ public final class EmployeeImmutable {
     @Override
     public String toString() {
         return "EmployeeImmutable{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+                "Id=" + Id +
+                ", Name='" + Name + '\'' +
                 ", address=" + address +
                 '}';
     }

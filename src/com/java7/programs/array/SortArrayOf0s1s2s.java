@@ -6,31 +6,31 @@ public class SortArrayOf0s1s2s {
 	private static void sortArray(int[] inputArray)
 	{
 		System.out.println("Array Before Sorting : "+Arrays.toString(inputArray));
-		//Initializing low and mid to 0
+		//Initializing low and mId to 0
 		int low = 0; 
-		int mid = 0; 
+		int mId = 0; 
 		//and high to last index
 		int high = inputArray.length-1;
-		//Until mid doesn't cross high
-		while (mid <= high)
+		//Until mId doesn't cross high
+		while (mId <= high)
 		{
 			//If an element is 0, bring it to the beginning
-			if (inputArray[mid] == 0)
+			if (inputArray[mId] == 0)
 			{
-				swap(inputArray, low, mid);
+				swap(inputArray, low, mId);
 				low++;
-				mid++;
+				mId++;
 			}
 			//If an element is 2, send it to the end
-			else if (inputArray[mid] == 2)
+			else if (inputArray[mId] == 2)
 			{
-				swap(inputArray, mid, high);
+				swap(inputArray, mId, high);
 				high--;
 			}
 			//If an element is 1, let it be there only
 			else
 			{
-				mid++;
+				mId++;
 			}
 		}
 		System.out.println("Array After Sorting : "+Arrays.toString(inputArray));

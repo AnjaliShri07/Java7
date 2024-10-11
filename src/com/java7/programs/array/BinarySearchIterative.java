@@ -14,7 +14,7 @@ public class BinarySearchIterative {
         while (l <= r) {
             int m = l + (r - l) / 2;
  
-            // Check if x is present at mid
+            // Check if x is present at mId
             if (arr[m] == x)
                 return m;
  
@@ -22,7 +22,7 @@ public class BinarySearchIterative {
             if (arr[m] < x)
                 l = m + 1;
  
-            // If x is smaller, element is on left side
+            // If x is smaller, element is on left sIde
             // so ignore right half
             else
                 r = m - 1;

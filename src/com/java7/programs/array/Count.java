@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class Count
 {
-
-	    public static void main(String args[] ) throws Exception {
+	    public static void main(String[] args) throws Exception {
 
 	    	int i, b;
 	    	int count=0;
@@ -13,7 +12,7 @@ public class Count
 			System.out.print("Enter number of element you want in array : ");
 			int num = sc.nextInt();
 			
-			int a[] = new int[num];
+			int[] a = new int[num];
 			System.out.println("Enter elements of array : ");
 			for(i=0; i< num; i++)
 			{

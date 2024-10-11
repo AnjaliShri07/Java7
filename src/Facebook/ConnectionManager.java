@@ -11,8 +11,8 @@ public class ConnectionManager {
         this.users = new HashMap<>();
     }
 
-    public User createUser(String name, String userType, String extraInfo) throws SQLException {
-        String insertUser = "INSERT INTO users(name, user_type, extra_info)VALUES(?,?,?)";
+    public User createUser(String Name, String userType, String extraInfo) throws SQLException {
+        String insertUser = "INSERT INTO users(Name, user_type, extra_info)VALUES(?,?,?)";
 
         try(Connection conn = DataBaseConnection.getConnection();
             PreparedStatement pstmt = conn.prepareStatement(insertUser, Statement.RETURN_GENERATED_KEYS)){
@@ -24,7 +24,7 @@ public class ConnectionManager {
             ResultSet generatedKeys= pstmt.getGeneratedKeys();
             if(generatedKeys.next()){
                 User user  = User.fromResultSet(generatedKeys);
-                users.put(name, user);
+                users.put(Name, user);
                 return user;
             }
         } catch (ClassNotFoundException e) {
@@ -33,15 +33,15 @@ public class ConnectionManager {
         return null;
     }
 
-    public User getUsers(String name) throws SQLException, ClassNotFoundException {
-        String selectSQL = "Select * from users where name = ?";
+    public User getUsers(String Name) throws SQLException, ClassNotFoundException {
+        String selectSQL = "Select * from users where Name = ?";
         try(Connection conn = DataBaseConnection.getConnection();
             PreparedStatement pstmt = conn.prepareStatement(selectSQL)){
-            pstmt.setString(1, name);
+            pstmt.setString(1, Name);
             ResultSet rs = pstmt.executeQuery();
             if(rs.next()){
                 User user  = User.fromResultSet(rs);
-                users.put(name, user);
+                users.put(Name, user);
                 return user;
             }
 
@@ -55,7 +55,7 @@ public class ConnectionManager {
 
         if(user != null && connection != null){
             user.addConnections(connection);
-            String insertSQL = "INSERT INTO connections(user_id, connection_id)VALUES(?,?)";
+            String insertSQL = "INSERT INTO connections(user_Id, connection_Id)VALUES(?,?)";
             try(Connection conn = DataBaseConnection.getConnection();
                 PreparedStatement pstmt = conn.prepareStatement(insertSQL)) {
                 pstmt.setInt(1, user.getId());
@@ -67,7 +67,7 @@ public class ConnectionManager {
     }
 
     public void loadConnections(User user) throws SQLException {
-            String querySql = "Select u.* FROM connections c JOIN user u ON c.connection_id = u.id WHERE c.user_id =?";
+            String querySql = "Select u.* FROM connections c JOIN user u ON c.connection_Id = u.Id WHERE c.user_Id =?";
         try(Connection conn = DataBaseConnection.getConnection();
             PreparedStatement pstmt = conn.prepareStatement(querySql)) {
             pstmt.setInt(1, user.getId());

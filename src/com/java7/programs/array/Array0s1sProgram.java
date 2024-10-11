@@ -2,7 +2,7 @@ package com.java7.programs.array;
 
 import java.util.Arrays;
 
-//A divide-and-conquer algorithm
+//A divIde-and-conquer algorithm
 public class Array0s1sProgram {
 	private static void sortBinaryArray(int[] inputArray)
 	{
@@ -24,7 +24,7 @@ public class Array0s1sProgram {
 				left++;
 			}
 		}
-		System.out.println("Input Array After Sorting Left side : "+Arrays.toString(inputArray));
+		System.out.println("Input Array After Sorting Left sIde : "+Arrays.toString(inputArray));
 	}
 	public static void main(String[] args) 
 	{

@@ -33,12 +33,12 @@ public class FirstBadVersion {
         int right = n;
 
         while (left < right) {
-            int mid = left + (right - left) / 2;
+            int mId = left + (right - left) / 2;
 
-            if (isBadVersion(mid)) {
-                right = mid; // The first bad version is at mid or before mid.
+            if (isBadVersion(mId)) {
+                right = mId; // The first bad version is at mId or before mId.
             } else {
-                left = mid + 1; // The first bad version is after mid.
+                left = mId + 1; // The first bad version is after mId.
             }
         }
 

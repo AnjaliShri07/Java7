@@ -8,14 +8,11 @@ public class LongestCommonPrefix {
 
 		// Use the first string as the initial prefix
 		String prefix = words[0];
-		System.out.println(prefix);
 		// Iterate over the array of strings
 		for (String str : words) {
 			// Reduce the prefix until it matches the start of the current string
 			while (str.indexOf(prefix) != 0) {
-				System.out.println(prefix.length());
 				prefix = prefix.substring(0, prefix.length() - 1);
-				System.out.println(prefix);
 				if (prefix.isEmpty()) {
 					return "";
 				}
@@ -30,14 +27,15 @@ public class LongestCommonPrefix {
 		String[] words2 = {"dog", "racecar", "car"};
 		String[] words3 = {"flower","float","fly"};
 		String[] words4 = {"cat","cable","camera"};
+		String[] words5 = {"hello","world","java"};
 
-		String result1 = longestCommonPrefix(words1);
-		System.out.println("Longest Common Prefix: " + result1); // Output: "fl"
 
-		String result2 = longestCommonPrefix(words2);
-		System.out.println("Longest Common Prefix: " + result2); // Output: ""
+		System.out.println("Longest Common Prefix: " + longestCommonPrefix(words1)); // Output: "fl"
+
+		System.out.println("Longest Common Prefix: " + longestCommonPrefix(words2)); // Output: ""
 
 		System.out.println("Longest Common Prefix: " + longestCommonPrefix(words3));
 		System.out.println("Longest Common Prefix: " + longestCommonPrefix(words4));
+		System.out.println("Longest Common Prefix: "+ longestCommonPrefix(words5));
 	}
 }
