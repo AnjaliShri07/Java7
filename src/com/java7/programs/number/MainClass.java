@@ -17,7 +17,7 @@ public class MainClass
 		            System.out.println();
 		        }
 	}
-    public static  void main(String []args) 
+    public static  void main(String []args)
     {
     	Scanner sc = new Scanner(System.in);
         System.out.println("How many rows you want in this pattern?");

@@ -14,7 +14,6 @@ public class FlipCount {
         int flipCount = 0;
         int i=0;
         while(i < str.length())
-        //for (int i = 0; i < str.length(); i++)
         {
             //  if current character is not expected, increase flip count
             if (str.charAt(i) != expected)

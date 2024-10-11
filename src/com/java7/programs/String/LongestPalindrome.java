@@ -2,9 +2,8 @@ package com.java7.programs.String;
 
 public class LongestPalindrome {
     public static String longestPalindrome(String s) {
-        if (s == null || s.length() < 1) {
+        if (s == null || s.isEmpty())
             return "";
-        }
 
         int n = s.length();
 

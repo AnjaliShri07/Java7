@@ -3,7 +3,7 @@ package com.java7.programs.array;
 import java.util.Arrays;
 
 //A divIde-and-conquer algorithm
-public class Array0s1sProgram {
+public class Array0s1s {
 	private static void sortBinaryArray(int[] inputArray)
 	{
 		int left = 0;

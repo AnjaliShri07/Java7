@@ -1,7 +1,7 @@
 package com.java7.programs.array;
 
 public class NegativePositiveArrange {
-	 static void ArrangeElements(int arr[]){
+	 static void ArrangeElements(int[] arr){
 		 int a, j;
 		 	for(int i=1; i<arr.length ; i++){
 		 		a = arr[i];
@@ -18,9 +18,9 @@ public class NegativePositiveArrange {
 	public static void main(String[] args) {
 		 int[] array = {4,-3,8,9,-1,5,2,-10,-11,45};
 	        ArrangeElements(array);
-	        for(int i=0; i<array.length;i++){
-	            System.out.println(array[i] + ",");
-	        }
+        for (int j : array) {
+            System.out.print(j + ",");
+        }
 
 	}
 

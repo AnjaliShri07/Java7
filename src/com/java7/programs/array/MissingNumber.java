@@ -6,9 +6,7 @@ public class MissingNumber
 	{
 		// take max length as last number in array
 		int k[] = new int[number[number.length-  1]];
-
 		int m = 0;
-
 		if (number[0] != 1)
 		{
 			for (int x = 1; x < number[0]; x++)

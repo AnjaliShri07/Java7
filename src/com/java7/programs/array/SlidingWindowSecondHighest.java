@@ -17,7 +17,7 @@ public class SlidingWindowSecondHighest {
         return secondHighest;
     }
 
-    public static void findSecondHighestInSlIdingWindow(int[] arr, int k) {
+    public static void findSecondHighestInSlidingWindow(int[] arr, int k) {
         if (arr == null || arr.length < k) {
             throw new IllegalArgumentException("Array length must be greater than or equal to window size");
         }
@@ -35,6 +35,6 @@ public class SlidingWindowSecondHighest {
         int[] arr = {2, 5, 100, 3, 7, -1};
         int j = 3; // Window size
 
-        findSecondHighestInSlIdingWindow(arr, j);
+        findSecondHighestInSlidingWindow(arr, j);
     }
 }

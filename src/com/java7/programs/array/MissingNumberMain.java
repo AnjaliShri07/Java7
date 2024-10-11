@@ -10,15 +10,18 @@ public class MissingNumberMain {
  
     }
  
-	public static int missingNumber(int[] arr)
+	public static int missingNumber(int[] nums)
 	{
-		int n=arr.length+1;
-		int sum=n*(n+1)/2;
-		int restSum=0;
-		for (int i = 0; i < arr.length; i++) {
-			restSum+=arr[i];
+		int n = nums.length + 1;  // Since one number is missing, the length should be n
+		int expectedSum = n * (n + 1) / 2;  // Sum of numbers from 1 to n
+		int actualSum = 0;
+
+		// Calculate the actual sum of the array elements
+		for (int num : nums) {
+			actualSum += num;
 		}
-		int missingNumber=sum-restSum;
-		return missingNumber;
+
+		// The missing number is the difference between the expected and actual sum
+		return expectedSum - actualSum;
 	}
 }

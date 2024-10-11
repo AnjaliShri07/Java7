@@ -13,7 +13,7 @@ public class WordChecker
             System.out.println("Enter a word");
             String str= in.readLine();
             while (str  != null) {
-                if (str.indexOf(word) != -1) {
+                if (str.contains(word)) {
                     return true;
                 }
             }

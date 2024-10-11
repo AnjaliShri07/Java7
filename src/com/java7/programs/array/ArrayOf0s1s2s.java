@@ -2,35 +2,35 @@ package com.java7.programs.array;
 
 import java.util.Arrays;
 
-public class SortArrayOf0s1s2s {
+public class ArrayOf0s1s2s {
 	private static void sortArray(int[] inputArray)
 	{
 		System.out.println("Array Before Sorting : "+Arrays.toString(inputArray));
 		//Initializing low and mId to 0
 		int low = 0; 
-		int mId = 0; 
+		int mid = 0;
 		//and high to last index
 		int high = inputArray.length-1;
 		//Until mId doesn't cross high
-		while (mId <= high)
+		while (mid <= high)
 		{
 			//If an element is 0, bring it to the beginning
-			if (inputArray[mId] == 0)
+			if (inputArray[mid] == 0)
 			{
-				swap(inputArray, low, mId);
+				swap(inputArray, low, mid);
 				low++;
-				mId++;
+				mid++;
 			}
 			//If an element is 2, send it to the end
-			else if (inputArray[mId] == 2)
+			else if (inputArray[mid] == 2)
 			{
-				swap(inputArray, mId, high);
+				swap(inputArray, mid, high);
 				high--;
 			}
 			//If an element is 1, let it be there only
 			else
 			{
-				mId++;
+				mid++;
 			}
 		}
 		System.out.println("Array After Sorting : "+Arrays.toString(inputArray));

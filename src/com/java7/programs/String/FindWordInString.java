@@ -2,6 +2,7 @@ package com.java7.programs.String;
 
 public class FindWordInString {
     public static int findFirstOccurrence(String haystack, String needle) {
+
         return haystack.indexOf(needle);
     }
     public static void main(String[] args) {
