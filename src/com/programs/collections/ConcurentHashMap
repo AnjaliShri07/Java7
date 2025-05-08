@@ -1,0 +1,18 @@
+1.ConcurrentHashMap is the class that is similar to HashMap but works fine when you try to modify your map 
+at runtime.
+
+Question - How does iterator know that there has been some modification in the HashMap?
+Answer - 
+1.We have taken the set of keys from HashMap once and then iterating over it.
+2.HashMap contains a variable to count the number of modifications and iterator use it 
+when you call its next() function to get the next entry.
+
+
+/**
+     * The number of times this HashMap has been structurally modified
+     * Structural modifications are those that change the number of mappings in
+     * the HashMap or otherwise modify its internal structure (e.g.,
+     * rehash).  This field is used to make iterators on Collection-views of
+     * the HashMap fail-fast.  (See ConcurrentModificationException).
+     */
+    transient volatile int modCount;

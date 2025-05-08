@@ -1,0 +1,11 @@
+*****Now let’s take a look at code: CODE_EXPLANATION*********
+Create class CrunchifyConcurrentHashMapVsSynchronizedHashMap.java
+Create object for each HashTable, SynchronizedMap and CrunchifyConcurrentHashMap
+Add and retrieve 500k entries from Map
+Measure start and end time and display time in milliseconds
+We will use ExecutorService to run 5 threads in parallel.
+
+shutdown() means the executor service takes no more incoming tasks.
+awaitTermination() is invoked after a shutdown request.
+
+And hence, you need to first shutdown the serviceExecutor and then block and wait for threads to finish.
